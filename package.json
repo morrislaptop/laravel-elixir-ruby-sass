@@ -12,8 +12,16 @@
     "ruby-sass",
     "gulp"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolasParada/laravel-elixir-ruby-sass"
+  },
   "author": "Nicolás Parada",
   "license": "MIT",
+  "homepage": "https://github.com/NicolasParada/laravel-elixir-ruby-sass",
+  "bugs": {
+    "url": "https://github.com/NicolasParada/laravel-elixir-ruby-sass/issues"
+  },
   "dependencies": {
     "gulp-ruby-sass": "latest",
     "gulp-if": "latest",
