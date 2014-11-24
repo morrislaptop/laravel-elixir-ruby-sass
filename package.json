@@ -1,0 +1,25 @@
+{
+  "name": "laravel-elixir-ruby-sass",
+  "version": "1.0.0",
+  "description": "Laravel Elixir Ruby Sass Extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "ruby-sass",
+    "gulp"
+  ],
+  "author": "Nicolás Parada",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-ruby-sass": "latest",
+    "gulp-if": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rename": "latest",
+    "gulp-notify": "latest"
+  }
+}
