@@ -12,7 +12,7 @@ elixir.extend('rubySass', function(src, output) {
 	var config = this;
 	var baseDir = config.assetsDir + 'sass';
 	src = baseDir + '/' + src;
-	//src = this.buildGulpSrc(src, baseDir, '**/*.sass');
+	//src = this.buildGulpSrc(src, baseDir, '**/*.+(sass|scss)');
 
 	gulp.task('rubySass', function() {
 		var onError = function(err) {
@@ -42,7 +42,7 @@ elixir.extend('rubySass', function(src, output) {
 			}));
 	});
 
-	this.registerWatcher('rubySass', baseDir + '/**/*.sass');
+	this.registerWatcher('rubySass', baseDir + '/**/*.+(sass|scss)');
 	return this.queueTask('rubySass');
 
 });
