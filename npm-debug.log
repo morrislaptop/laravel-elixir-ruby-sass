@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   './' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ './' ]
+6 verbose cache add [ './', null ]
+7 verbose cache add name=undefined spec="./" args=["./",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: './',
+8 verbose parsed url   path: './',
+8 verbose parsed url   href: './' }
+9 silly lockFile 0ee6c175- ./
+10 verbose lock ./ C:\Users\Shinobi\AppData\Roaming\npm-cache\0ee6c175-.lock
+11 verbose tar pack [ 'C:\\Users\\Shinobi\\AppData\\Roaming\\npm-cache\\laravel-elixir-ruby-sass\\1.0.0\\package.tgz',
+11 verbose tar pack   './' ]
+12 verbose tarball C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package.tgz
+13 verbose folder ./
+14 info prepublish laravel-elixir-ruby-sass@1.0.0
+15 silly lockFile 04cb2bca-tar tar://./
+16 verbose lock tar://./ C:\Users\Shinobi\AppData\Roaming\npm-cache\04cb2bca-tar.lock
+17 silly lockFile 840e40f2-ixir-ruby-sass-1-0-0-package-tgz tar://C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package.tgz
+18 verbose lock tar://C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package.tgz C:\Users\Shinobi\AppData\Roaming\npm-cache\840e40f2-ixir-ruby-sass-1-0-0-package-tgz.lock
+19 silly lockFile 04cb2bca-tar tar://./
+20 silly lockFile 04cb2bca-tar tar://./
+21 silly lockFile 840e40f2-ixir-ruby-sass-1-0-0-package-tgz tar://C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package.tgz
+22 silly lockFile 840e40f2-ixir-ruby-sass-1-0-0-package-tgz tar://C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package.tgz
+23 silly lockFile e92379e5-l-elixir-ruby-sass-1-0-0-package C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package
+24 verbose lock C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package C:\Users\Shinobi\AppData\Roaming\npm-cache\e92379e5-l-elixir-ruby-sass-1-0-0-package.lock
+25 silly lockFile e92379e5-l-elixir-ruby-sass-1-0-0-package C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package
+26 silly lockFile e92379e5-l-elixir-ruby-sass-1-0-0-package C:\Users\Shinobi\AppData\Roaming\npm-cache\laravel-elixir-ruby-sass\1.0.0\package
+27 silly lockFile 0ee6c175- ./
+28 silly lockFile 0ee6c175- ./
+29 silly publish { name: 'laravel-elixir-ruby-sass',
+29 silly publish   version: '1.0.0',
+29 silly publish   description: 'Laravel Elixir Ruby Sass Extension',
+29 silly publish   main: 'index.js',
+29 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+29 silly publish   keywords: [ 'laravel', 'elixir', 'ruby-sass', 'gulp' ],
+29 silly publish   repository:
+29 silly publish    { type: 'git',
+29 silly publish      url: 'https://github.com/NicolasParada/laravel-elixir-ruby-sass' },
+29 silly publish   author: { name: 'Nicolás Parada' },
+29 silly publish   license: 'MIT',
+29 silly publish   homepage: 'https://github.com/NicolasParada/laravel-elixir-ruby-sass',
+29 silly publish   bugs: { url: 'https://github.com/NicolasParada/laravel-elixir-ruby-sass/issues' },
+29 silly publish   dependencies:
+29 silly publish    { 'gulp-ruby-sass': 'latest',
+29 silly publish      'gulp-if': 'latest',
+29 silly publish      'gulp-autoprefixer': 'latest',
+29 silly publish      'gulp-minify-css': 'latest',
+29 silly publish      'gulp-rename': 'latest',
+29 silly publish      'gulp-notify': 'latest' },
+29 silly publish   readme: 'laravel-elixir-ruby-sass\r\n========================\r\n\r\n## Usage\r\nThis is a simple [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass) wrapper ingredient for Laravel Elixir.\r\nAdd it to your Elixir-enhanced Gulpfile, like so:\r\n\r\n```\r\nvar elixir = require(\'laravel-elixir\');\r\n\r\nrequire(\'laravel-elixir-ruby-sass\');\r\n\r\nelixir(function(mix) {\r\n  mix.rubySass(\'app.sass\');\r\n});\r\n```\r\n\r\nThis will compile your `resources/assets/sass/app.sass` file. If you\'d like to output to a different directory than the default `public/css`, then you may override this as well.\r\n\r\n```\r\nmix.rubySass(\'app.sass\', \'public/css/foo/bar/\');\r\n```',
+29 silly publish   readmeFilename: 'README.md',
+29 silly publish   gitHead: 'a82a0e884acaba0e6441840ccabb294a2489dce9',
+29 silly publish   _id: 'laravel-elixir-ruby-sass@1.0.0',
+29 silly publish   _shasum: '34da2fde865c7156ab0799dc0b4fa2072aeeb924',
+29 silly publish   _from: './' }
+30 error need auth auth and email required for publishing
+30 error need auth You need to authorize this machine using `npm adduser`
+31 error System Windows_NT 6.2.9200
+32 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "./"
+33 error cwd C:\Users\Shinobi\Desktop\vagrant\Projects\neet\node_modules\laravel-elixir-ruby-sass
+34 error node -v v0.10.33
+35 error npm -v 1.4.28
+36 error code ENEEDAUTH
+37 verbose exit [ 1, true ]
