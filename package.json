@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-ruby-sass",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Laravel Elixir Ruby Sass Extension",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "type": "git",
     "url": "https://github.com/NicolasParada/laravel-elixir-ruby-sass"
   },
-  "author": "Nicolás Parada",
+  "author": {
+    "name": "Nicolás Parada"
+  },
   "license": "MIT",
   "homepage": "https://github.com/NicolasParada/laravel-elixir-ruby-sass",
   "bugs": {
@@ -28,6 +30,7 @@
     "gulp-autoprefixer": "latest",
     "gulp-minify-css": "latest",
     "gulp-rename": "latest",
-    "gulp-notify": "latest"
+    "gulp-notify": "latest",
+    "underscore": "latest"
   }
 }
