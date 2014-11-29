@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-ruby-sass",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Laravel Elixir Ruby Sass Extension",
   "main": "index.js",
   "scripts": {
