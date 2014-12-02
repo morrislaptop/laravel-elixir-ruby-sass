@@ -6,7 +6,7 @@ var elixir       = require('laravel-elixir'),
 	minify       = require('gulp-minify-css'),
 	rename       = require('gulp-rename'),
 	notify       = require('gulp-notify'),
-	utilities    = require('laravel-elixir/ingredients/helpers/utilities'),
+	utilities    = require('laravel-elixir/ingredients/helpers/Utilities'),
 	config       = require('laravel-elixir').config,
 	_            = require('underscore');;
 
