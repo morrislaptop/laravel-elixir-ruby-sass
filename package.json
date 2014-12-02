@@ -29,7 +29,6 @@
     "gulp-if": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-minify-css": "latest",
-    "gulp-rename": "latest",
     "gulp-notify": "latest",
     "underscore": "latest"
   }
