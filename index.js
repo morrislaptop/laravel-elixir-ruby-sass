@@ -4,7 +4,6 @@ var elixir       = require('laravel-elixir'),
 	gulpif       = require('gulp-if'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minify       = require('gulp-minify-css'),
-	rename       = require('gulp-rename'),
 	notify       = require('gulp-notify'),
 	utilities    = require('laravel-elixir/ingredients/helpers/Utilities'),
 	config       = require('laravel-elixir').config,
@@ -37,7 +36,6 @@ elixir.extend('rubySass', function(src, output, options) {
 			.pipe(rubySass(options)).on('error', onError)
 			.pipe(autoprefixer())
 			.pipe(gulpif(config.production, minify()))
-			.pipe(gulpif(config.production, rename({suffix: '.min'})))
 			.pipe(gulp.dest(output || config.cssOutput));
 	});
 
