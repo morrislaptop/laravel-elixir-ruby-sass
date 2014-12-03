@@ -18,7 +18,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
 	options = _.extend({
 		"sourcemap=none": true,
-		loadPath: [config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
+		loadPath: [config.bowerDir, config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
 	}, options);
 
 	gulp.task('rubySass', function() {
