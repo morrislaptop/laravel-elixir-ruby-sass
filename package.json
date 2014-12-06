@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-ruby-sass",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Laravel Elixir Ruby Sass Extension",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,6 @@
     "gulp-if": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-minify-css": "latest",
-    "gulp-notify": "latest",
     "underscore": "latest"
   }
 }
