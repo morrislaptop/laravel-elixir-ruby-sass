@@ -4,7 +4,7 @@ var elixir       = require('laravel-elixir'),
 	gulpif       = require('gulp-if'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minify       = require('gulp-minify-css'),
-	notify       = require('gulp-notify'),
+	Notification = require('laravel-elixir/ingredients/helpers/Notification'),
 	utilities    = require('laravel-elixir/ingredients/helpers/Utilities'),
 	config       = require('laravel-elixir').config,
 	_            = require('underscore');;
@@ -22,13 +22,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
 	gulp.task('rubySass', function() {
 		var onError = function(err) {
-			notify.onError({
-				title:	'Laravel Elixir',
-				subtitle: 'Sass Compilation Failed!',
-				message:  'Error: <%= error.message %>',
-				icon: __dirname + '/../laravel-elixir/icons/fail.png'
-			})(err);
-
+			new Notification().error(err, 'Sass Compilation Failed!');
 			this.emit('end');
 		};
 
