@@ -4,8 +4,8 @@ var elixir       = require('laravel-elixir'),
 	gulpif       = require('gulp-if'),
 	autoprefixer = require('gulp-autoprefixer'),
 	minify       = require('gulp-minify-css'),
-	Notification = require('laravel-elixir/ingredients/helpers/Notification'),
-	utilities    = require('laravel-elixir/ingredients/helpers/Utilities'),
+	Notification = require('laravel-elixir/ingredients/commands/Notification'),
+	utilities    = require('laravel-elixir/ingredients/commands/Utilities'),
 	config       = require('laravel-elixir').config,
 	_            = require('underscore');;
 
