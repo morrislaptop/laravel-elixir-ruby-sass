@@ -35,5 +35,5 @@ elixir.extend('rubySass', function(src, output, options) {
         elixir.config.assetsDir + 'sass' + '/' + search
     );
 
-    return elixir.config.queueTask('rubySass');
+    return elixir.config.queueTask(pluginName);
 });
