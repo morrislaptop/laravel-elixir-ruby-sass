@@ -14,7 +14,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
     options = _.extend({
         style: inProduction ? 'compressed' : 'nested',
-        loadPath: [elixir.config.bowerDir + '/bootstrap-sass-official/assets/stylesheets']
+        loadPath: [elixir.config.bowerDir + '/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss']
     }, options);
 
 
