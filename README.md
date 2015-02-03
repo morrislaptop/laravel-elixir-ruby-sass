@@ -20,3 +20,13 @@ This will compile your `resources/assets/sass/app.sass` file. If you'd like to o
 ```
 mix.rubySass('app.sass', 'public/css/foo/bar/');
 ```
+
+## Include Bootstrap
+
+To include bootstrap add the following line to your `app.sass`.
+
+```
+@import '../../../vendor/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss'
+```
+
+This is different from the default elixir-sass plugin which does this automatically.
