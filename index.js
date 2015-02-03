@@ -32,7 +32,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
     elixir.config.registerWatcher(
         pluginName,
-        elixir.config.assetsDir + pluginName + '/' + search
+        elixir.config.assetsDir + 'sass' + '/' + search
     );
 
     return elixir.config.queueTask('rubySass');
