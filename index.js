@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var elixir = require('laravel-elixir');
-var compile = require('./commands/CompileCSS');
+var compile = require('laravel-elixir/ingredients/commands/CompileCSS');
 var _ = require('underscore');
 
 var inProduction = elixir.config.production
