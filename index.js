@@ -1,6 +1,9 @@
-var elixir       = require('laravel-elixir'),
-	gulp         = require('gulp'),
-	rubySass     = require('gulp-ruby-sass'),
+var gulp = require('gulp');
+var elixir = require('laravel-elixir');
+var compile = require('./commands/CompileCSS');
+var _ = require('underscore');
+
+var inProduction = elixir.config.production
 
 elixir.extend('rubySass', function(src, output, options) {
 
