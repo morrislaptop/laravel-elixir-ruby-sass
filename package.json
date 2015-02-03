@@ -25,10 +25,11 @@
     "url": "https://github.com/NicolasParada/laravel-elixir-ruby-sass/issues"
   },
   "dependencies": {
-    "gulp-ruby-sass": "latest",
-    "gulp-if": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-minify-css": "latest",
-    "underscore": "latest"
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-if": "^1.2.5",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-minify-css": "^0.3.10",
+    "underscore": "^1.7.0",
+    "gulp-load-plugins": "^0.8.0"
   }
 }
