@@ -27,7 +27,7 @@ elixir.extend('rubySass', function(src, output) {
             }))
             .pipe(plugins.autoprefixer())
             .pipe(plugins.if(config.production, plugins.minifyCss()))
-            .pipe(gulp.dest(output))
+            .pipe(gulp.dest(output || config.cssOutput))
             .pipe(new Notification().message('Ruby Sass Compiled!'));
     });
 
