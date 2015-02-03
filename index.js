@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var elixir = require('laravel-elixir');
 var plugins = require('gulp-load-plugins')();
+var config = require('laravel-elixir').config;
 var utilities = require('laravel-elixir/ingredients/commands/Utilities');
 var Notification = require('laravel-elixir/ingredients/commands/Notification');
 var _ = require('underscore');
@@ -26,8 +27,6 @@ elixir.extend('rubySass', function(src, output, options) {
             this.emit('end');
         };
 
-        process.stdout.write(Object.getOwnPropertyNames(plugins) + '\n\n');
-
         gulp.task(options.pluginName, function() {
             return gulp.src(src)
                 .pipe(plugins[options.pluginName](options.pluginOptions)).on('error', onError)
@@ -47,7 +46,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
     return compile({
         compiler: 'RubySass',
-        pluginName: 'ruby-sass',
+        pluginName: 'rubySass',
         pluginOptions: options,
         src: src,
         output: output,
