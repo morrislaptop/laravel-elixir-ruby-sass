@@ -13,10 +13,8 @@ elixir.extend('rubySass', function(src, output, options) {
     var search = '**/*.+(sass|scss)';
 
     options = _.extend({
-        style: inProduction ? 'compressed' : 'nested',
-        loadPath: [elixir.config.bowerDir + '/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss']
+        style: inProduction ? 'compressed' : 'nested'
     }, options);
-
 
     gulp.task(pluginName, function () {
 
@@ -38,5 +36,4 @@ elixir.extend('rubySass', function(src, output, options) {
     );
 
     return elixir.config.queueTask('rubySass');
-
 });
