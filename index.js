@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
 var elixir = require('laravel-elixir');
 var plugins = require('gulp-load-plugins')();
 var config = require('laravel-elixir').config;
@@ -9,48 +8,34 @@ var _ = require('underscore');
 
 var inProduction = elixir.config.production;
 
-elixir.extend('rubySass', function(src, output, options) {
+elixir.extend('rubySass', function(src, output) {
 
-    options = _.extend({
-        outputStyle: inProduction ? 'compressed' : 'nested',
-        includePaths: [elixir.config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
-    }, options);
+    var pluginName = 'rubySass';
+    var search = '**/*.+(sass)';
 
-    function compile(options) {
-        var src = utilities.buildGulpSrc(
-            options.src, config.assetsDir + options.pluginName, options.search
+
+    gulp.task(pluginName, function () {
+
+        var gulpSrc = utilities.buildGulpSrc(
+            src, config.assetsDir + 'sass', search
         );
 
-        var onError = function(e) {
-            new Notification().error(e, options.compiler + ' Compilation Failed!');
-
-            this.emit('end');
-        };
-
-        gulp.task(options.pluginName, function() {
-            return gulp.src(src)
-                .pipe(plugins[options.pluginName](options.pluginOptions)).on('error', onError)
-                .pipe(plugins.autoprefixer())
-                .pipe(plugins.if(config.production, plugins.minifyCss()))
-                .pipe(gulp.dest(options.output || config.cssOutput))
-                .pipe(new Notification().message(options.compiler + ' Compiled!'));
-        });
-
-        config.registerWatcher(
-            options.pluginName,
-            config.assetsDir + options.pluginName + '/' + options.search
-        );
-
-        return config.queueTask(options.pluginName);
-    }
-
-    return compile({
-        compiler: 'RubySass',
-        pluginName: 'rubySass',
-        pluginOptions: options,
-        src: src,
-        output: output,
-        search: '**/*.+(sass|scss)'
+        return gulp.src(gulpSrc)
+            .pipe(plugins.rubySass({
+                style: inProduction ? 'compressed' : 'nested',
+                loadPath: [elixir.config.bowerDir + "/bootstrap-sass-official/assets/stylesheets"]
+            }))
+            .pipe(plugins.autoprefixer())
+            .pipe(plugins.if(config.production, plugins.minifyCss()))
+            .pipe(gulp.dest(output))
+            .pipe(new Notification().message('Ruby Sass Compiled!'));
     });
+
+    config.registerWatcher(
+        pluginName,
+        config.assetsDir + pluginName + '/' + search
+    );
+
+    return config.queueTask('rubySass');
 
 });
