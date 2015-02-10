@@ -14,7 +14,7 @@ elixir.extend('rubySass', function(src, output, options) {
 
     options = _.extend({
         style: inProduction ? 'compressed' : 'nested',
-        sourcemap: sourcemaps in elixir.config ? elixir.config.sitemaps : !inProduction;
+        sourcemap: 'sourcemaps' in elixir.config ? elixir.config.sourcemaps : !inProduction
     }, options);
 
     gulp.task(pluginName, function () {
@@ -23,11 +23,11 @@ elixir.extend('rubySass', function(src, output, options) {
             src, elixir.config.assetsDir + 'sass', search
         );
 
-        return plugins.rubySass(options))
+        return plugins.rubySass(gulpSrc, options)
             .pipe(plugins.autoprefixer())
             .pipe(plugins.if(elixir.config.production, plugins.minifyCss()))
             .pipe(plugins.if(options.sourcemap, plugins.sourcemaps.write('.')))
-            .pipe(gulp.dest(output))
+            .pipe(gulp.dest(output || elixir.config.cssOutput))
             .pipe(new Notification().message('Ruby Sass Compiled!'));
     });
 
