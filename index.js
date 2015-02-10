@@ -13,7 +13,7 @@ elixir.extend('rubySass', function(src, output, options) {
     var search = '**/*.+(sass|scss)';
 
     options = _.extend({
-        style: inProduction ? 'compressed' : 'nested'
+        style: inProduction ? 'compressed' : 'nested',
         sourcemap: sourcemaps in elixir.config ? elixir.config.sitemaps : !inProduction;
     }, options);
 
